@@ -11,7 +11,7 @@ async def echo(update: Update, context: CallbackContext) -> None:
 
 
 def main() -> None:
-    app = ApplicationBuilder().token(config.TOKEN).build()
+    app = ApplicationBuilder().token(config.TOKEN).build() //токен должен находится в папке .config
     
     app.add_handler(TypeHandler(Update, echo))
     
